@@ -1,0 +1,114 @@
+[
+    {
+        "id": "price_1QdFPSKTaYLsTIjjXzGUXT7k",
+        "img": "g1.jpg",
+        "brand": "Angelique",
+        "name": "Blue pearl Gown",
+        "price": 6000
+    },
+    {
+        "id": "price_1QdFSBKTaYLsTIjjiW1h1BCf",
+        "img": "j7.jpg",
+        "brand": "Angelique",
+        "name": "Black dress shirt",
+        "price": 6000
+    },
+    {
+        "id": "price_1QdFW2KTaYLsTIjjU53lJCTn",
+        "img": "j5.jpg",
+        "brand": "Angelique",
+        "name": "NavyBlue dress shirt",
+        "price": 6000
+    },
+    {
+        "id": "price_1QdFY0KTaYLsTIjjo8EGxyiq",
+        "img": "j6.jpg",
+        "brand": "Angelique",
+        "name": "Red dress shirt",
+        "price": 6000
+    },
+    {
+        "id": "price_1QdFauKTaYLsTIjjNHULueXH",
+        "img": "jj (1).jpg",
+        "brand": "Angelique",
+        "name": "Red black-bottoms",
+        "price": 6000
+    },
+    {
+        "id": "price_1QdFfFKTaYLsTIjjyNE8p378",
+        "img": "jj (2).jpg",
+        "brand": "Angelique",
+        "name": "Flat black shoes",
+        "price": 6000
+    },
+    {
+        "id": "price_1QdFPSKTaYLsTIjjXzGUXT7k",
+        "img": "jj (4).jpg",
+        "brand": "Angelique",
+        "name": "Black bottom-flat shoes",
+        "price": 6000
+    },
+    {
+        "id": 8,
+        "img": "jj (3).jpg",
+        "brand": "Angelique",
+        "name": "Black shred shoes",
+        "price": 6000,
+        "cPrice": "price_1QdFPSKTaYLsTIjjXzGUXT7k"
+    },
+    {
+        "id": 9,
+        "img": "J8.jpg",
+        "brand": "Angelique",
+        "name": "Black slipper shoes",
+        "price": 6000,
+        "cPrice": "price_1QdFPSKTaYLsTIjjXzGUXT7k"
+    },
+    {
+        "id": 10,
+        "img": "J10.jpg",
+        "brand": "Angelique",
+        "name": "Black slipper cloth shoes",
+        "price": 6000,
+        "cPrice": "price_1QdFPSKTaYLsTIjjXzGUXT7k"
+    },
+    {
+        "id": 11,
+        "img": "J12.jpg",
+        "brand": "Angelique",
+        "name": "Black flat-bottom",
+        "price": 6000,
+        "cPrice": "price_1QdFPSKTaYLsTIjjXzGUXT7k"
+    },
+    {
+        "id": 12,
+        "img": "J14.jpg",
+        "brand": "Angelique",
+        "name": "Black-bow heels",
+        "price": 6000,
+        "cPrice": "price_1QdFPSKTaYLsTIjjXzGUXT7k"
+    },
+    {
+        "id": 13,
+        "img": "J15.jpg",
+        "brand": "Angelique",
+        "name": "Khalki heels",
+        "price": 6000,
+        "cPrice": "price_1QdFPSKTaYLsTIjjXzGUXT7k"
+    },
+    {
+        "id": 14,
+        "img": "J21.jpg",
+        "brand": "Angelique",
+        "name": "White brown-bottom heels",
+        "price": 6000,
+        "cPrice": "price_1QdFPSKTaYLsTIjjXzGUXT7k"
+    },
+    {
+        "id": "5",
+        "img": "color_black_1_dean_oxford_1080x1080.png",
+        "brand": "Angelique",
+        "name": "Male black shoe",
+        "price": 6000
+    }
+]

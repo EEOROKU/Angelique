@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ANGELIQUE BOUTIQUE</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/x-icon" href="img/Logo.png">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="img/Logo.png" width="100px" height="100px" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+            <a href="cart.html"><img src="img/cart.png" style="height: 25px; width: 30px;"class="cart" alt=""></a>
+        </div>
+    </section>
+    <section id="page-header" class="about-header">
+        
+        <h2>#Cart</h2>
+        <p>Add your coupon code & SAVE upto 70%!</p>
+        
+    </section>
+    <section id="cart" class="section-p1">
+        <table id="cartTable" width="100%">
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                <div class="select">
+                    
+                </div>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            function displayCart() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartTable = document.getElementById("cartTable");
+
+    cart.forEach((product, index) => {
+        const row = document.createElement("tr");
+
+        const xCell = document.createElement("td");
+        const xIcon = document.createElement("i");
+        xIcon.className = "far fa-times-circle";
+        xIcon.addEventListener("click", () => removeFromCart(index));
+        xCell.appendChild(xIcon);
+        row.appendChild(xCell);
+
+        const imgCell = document.createElement("td");
+        const imgElement = document.createElement("img");
+        imgElement.src = product.imgSrc;
+        imgElement.alt = "";
+        imgCell.appendChild(imgElement);
+        row.appendChild(imgCell);
+
+        const nameCell = document.createElement("td");
+        nameCell.textContent = product.name;
+        row.appendChild(nameCell);
+
+        const priceCell = document.createElement("td");
+        priceCell.textContent = "N" + product.price.toFixed(2);
+        row.appendChild(priceCell);
+
+        const quantityCell = document.createElement("td");
+        const quantityInput = document.createElement("input");
+        quantityInput.type = "number";
+        quantityInput.value = "1";
+        quantityCell.appendChild(quantityInput);
+        row.appendChild(quantityCell);
+
+        const subtotalCell = document.createElement("td");
+        subtotalCell.textContent = "N" + product.price.toFixed(2);
+        row.appendChild(subtotalCell);
+
+        cartTable.appendChild(row);
+    });
+}
+function removeFromCart(index) {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    location.reload();
+}
+function updateCartTotals() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    let subtotal = 0;
+
+    cart.forEach(product => {
+        subtotal += product.price;
+    });
+
+    const shipping = 0; // You can update this value based on your shipping logic.
+
+    const total = subtotal + shipping;
+
+    const subtotalElement = document.getElementById("cartSubtotal");
+    const totalElement = document.getElementById("cartTotal");
+
+    subtotalElement.textContent = "N" + subtotal.toFixed(2);
+    totalElement.textContent = "N" + total.toFixed(2);
+}
+        
+displayCart();
+updateCartTotals();
+
+        </script>
+        
+    </section>
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply coupon</h3>
+            <div>
+                <input type="text" placeholder="Enter your coupon">
+                <button class="normal">Apply</button>
+            </div>
+        </div>
+        <div id="subtotal">
+            <h3>Cart Totals</h3>
+            <table>
+                <tr>
+                    <td>Cart Subtotal</td>
+                    <td id="cartSubtotal">N 0</td>
+                </tr>
+                <tr>
+                    <td>Shipping</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>Total</td>
+                    <td id="cartTotal">N 0</td>
+                </tr>
+                
+            </table>
+            <a href="http://bn.plus/vZla1g"><button class="normal">Proceed to checkout</button></a>
+        </div>
+    </section>
+    <footer class="section-p1">
+        <div class="col">
+            <img class="logo" src="img/Logo.png" width="100px" height="100px" alt="">
+            <h4>Contact</h4>
+            <p><strong>Address:</strong> 278 Port hacourt -Aba express road, opposite Shell RE. Rumukurushi Obio Akpor, Port Harcourt, Nigeria</p>
+            <P><strong>Phone:</strong> 07030467555</P>
+            <p><strong>Hours:</strong>07:00 - 20:00,Mon - Sat</p>
+            <div class="follow">
+                <h4>Follow us</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook -f"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-pinterest-p"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sign In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Wishlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col install">
+            <h4>Install App</h4>
+            <p>From Appstore or Google Play</p>
+            <div class="row">
+                <img src="img/pay/app.jpg" alt="">
+                <img src="img/pay/play.jpg" alt="">
+            </div>
+            <p>Secured Payment Gateways</p>
+            <img src="img/pay/pay.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>copyright</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script type="text/javascript">
+        var noti = document.querySelector('h1');
+        var select = document.querySelector('.select');
+        var button = document.getElementsByTagName('button');
+        for(but of button){
+            but.addEventListener('click',(e)=>{
+                var add = Number(noti.getAttribute('data-count')|| 0);
+                noti.setAttribute('data-count', add + 1);
+                noti.classList.add('zero');
+            })
+        }
+    </script>
+</body>
+</html>
